@@ -1,18 +1,29 @@
 defmodule Rockstar do
-  @moduledoc """
-  Documentation for Rockstar.
-  """
+  def convert(filename) do
+    filename
+    |> load_file
+    |> build_ast
+    |> to_ex
+  end
 
-  @doc """
-  Hello world.
+  defp load_file(filename) do
+    {:ok, code} = File.read(filename)
 
-  ## Examples
+    code
+    |> String.trim()
+    |> String.split("\n")
+    |> Enum.map(&String.trim/1)
+    |> Enum.filter(&(&1 != ""))
+  end
 
-      iex> Rockstar.hello()
-      :world
+  defp build_ast(lines) do
+    lines
+    |> Enum.map(&Rockstar.Parser.parse/1)
+    |> List.flatten()
+  end
 
-  """
-  def hello do
-    :world
+  defp to_ex(commands) do
+    commands
+    |> Enum.map(&Rockstar.Printer.print/1)
   end
 end
