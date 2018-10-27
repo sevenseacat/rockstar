@@ -12,7 +12,6 @@ defmodule Rockstar do
     code
     |> String.split("\n")
     |> Enum.map(&String.trim/1)
-    |> Enum.filter(&(&1 != ""))
   end
 
   defp build_ast(lines) do
