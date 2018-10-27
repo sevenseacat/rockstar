@@ -1,6 +1,8 @@
 defmodule Rockstar.Variable do
   @common_prefixes ~w(a an the my your)
 
+  def valid_name?(name), do: common_name?(name) || proper_name?(name)
+
   @doc """
   Checks if the provided string is a valid common variable name.
 
