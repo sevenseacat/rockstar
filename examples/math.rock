@@ -1,0 +1,61 @@
+(Taken from https://gist.github.com/wrenoud/6be6f7509c88a3d8f9867ae782fb768f)
+The loneliest is a.
+
+
+(Abs function)
+(returns the absolute value of 'a thought')
+Abs takes a thought
+If a thought is greater than nothing
+Give back a thought
+Else
+Give back nothing without a thought
+(end Abs function)
+
+
+(Pow function)
+(returns 'all' raised to 'your base')
+Pow takes all and your base
+If your base is empty
+Give back the loneliest
+    (end if)
+
+If your base is less than nothing
+Put nothing without your base into your base
+Give back the loneliest over Pow taking all, your base
+    (end if)
+
+Put the loneliest into the one
+Put all into the magic
+While the one is smaller than your base
+Put all of the magic into the magic
+Build the one up
+    (end while)
+
+Give back the magic
+(end Pow function)
+
+
+(some constants for Sqrt function)
+The wing is strange.
+My song is knickknack. lumberjacks
+Put Pow taking my song, the wing into the dawn
+Half is flummoxing. huzza
+
+
+(Sqrt function)
+(iterates until the estimate update is less than 'the dawn')
+Sqrt takes a mountain
+If a mountain is nowhere
+Give back nothing
+    (end if)
+
+Put a mountain into a molehill
+Put a molehill into the sea
+While Abs taking the sea is greater than the dawn
+Put a molehill into the sea
+Put Half of a molehill with Half of a mountain over a molehill into a molehill
+Put the sea without a molehill into the sea
+    (end while)
+
+Give back a molehill
+(end Sqrt function)
