@@ -1,6 +1,8 @@
 defmodule Rockstar.Parser do
   @doc """
-  Parses a line of Rockstar code into an intermediate readable format.
+  Parses a line of Rockstar code into an abstract syntax tree.
+
+  Comments are marked with parentheses.
 
   iex> Parser.parse("(this is a full-line comment)")
   {:comment, "this is a full-line comment"}

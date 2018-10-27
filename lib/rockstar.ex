@@ -10,7 +10,6 @@ defmodule Rockstar do
     {:ok, code} = File.read(filename)
 
     code
-    |> String.trim()
     |> String.split("\n")
     |> Enum.map(&String.trim/1)
     |> Enum.filter(&(&1 != ""))
